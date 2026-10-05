@@ -1,0 +1,31 @@
+Licences of the data in this repository's releases
+
+1. Railway lines (rail-blocks.pmtiles, rail-blocks.idx)
+
+   Derived from OpenStreetMap data (railway ways from the Overpass API,
+   2026-10-03), simplified to 0.2 m.
+   © OpenStreetMap contributors.
+   This database is made available under the Open Database License (ODbL) 1.0:
+   https://opendatacommons.org/licenses/odbl/1-0/
+   Any rights in individual contents of the database are licensed under the
+   Database Contents License: https://opendatacommons.org/licenses/dbcl/1-0/
+   OpenStreetMap copyright and licence: https://www.openstreetmap.org/copyright
+
+2. Time zones (in core_ref.db)
+
+   Derived from timezone-boundary-builder (timezones-with-oceans-1970, 2026d),
+   simplified to 1 km.
+   © OpenStreetMap contributors, timezone-boundary-builder
+   (https://github.com/evansiroky/timezone-boundary-builder).
+   Made available under the Open Database License (ODbL) 1.0:
+   https://opendatacommons.org/licenses/odbl/1-0/
+
+3. Countries, disputed areas, admin-1 regions and cities
+   (core_ref.db, geo-*.db.gz)
+
+   Derived from Natural Earth 1:10m (admin-0 countries, admin-0 disputed areas,
+   admin-1 states and provinces, populated places), version 5.1.1.
+   Natural Earth data is in the public domain: https://www.naturalearthdata.com/about/terms-of-use/
+
+The ODbL-licensed databases above are published here in full, as the app uses
+them.
