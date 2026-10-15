@@ -24,7 +24,7 @@ TravelMap 的参考数据：国家包（城市、一级行政区）、铁路线�
 | `road-street-blocks.pmtiles` | Streets (unclassified, residential, living street) of the same countries, one block per z10 tile (since `data-2`) |
 | `road-main-blocks.idx`, `road-street-blocks.idx` | Block indexes of the two road archives: byte offset, length and a 128-bit SHA-256 prefix of every block |
 | `road-countries.json` | The countries the road archives cover (`data-2`: Switzerland, Italy) and the OpenStreetMap extract date |
-| `names-blocks.pmtiles` | Detailed place names of the countries cut so far: transit stops, quarters and villages, and landmarks (museums, parks, hospitals, …) with their local names, one block per z10 tile, for naming a stay or a route's end finer than its city; read in single blocks with HTTP range requests (since `data-4`) |
+| `names-blocks.pmtiles` | Detailed place names of the countries cut so far: transit stops, quarters, villages, towns and cities (since `data-5`), and landmarks (museums, parks, hospitals, …) with their local names, one block per z10 tile, for naming a stay or a route's end finer than its city; read in single blocks with HTTP range requests (since `data-4`) |
 | `names-blocks.idx` | Block index of the names archive: byte offset, length and a 128-bit SHA-256 prefix of every block |
 | `names-countries.json` | The countries the names archive covers (`data-4`: Switzerland, Italy) and the OpenStreetMap extract date |
 
@@ -36,6 +36,8 @@ project (`georef core`, `georef packs`, `georef rail`, `georef rail-archive`,
 
 | Tag | Date | What changed |
 | --- | --- | --- |
+| `data-5` | 2026-10-15 | Detailed place names, format 2: towns and cities (OSM `place=town\|city`) join the archive, for naming the city level where Natural Earth has no city (Padova, for one). Names archive, index and countries file rebuilt; the other files as in `data-4` |
+| `data-4` | 2026-10-15 | Detailed place names of Switzerland and Italy (OSM 2026-10-08): transit stops, quarters and villages, landmarks, one block per z10 tile (`names-blocks.pmtiles`, its index, `names-countries.json`); the other files as in `data-3` |
 | `data-3` | 2026-10-14 | Place names in 26 languages, for the app to show them in the device's language: countries, regions and cities (Natural Earth's full populated places instead of the simple ones; the same places). Simplified Chinese names that had Traditional characters written in Simplified; China and the two Koreas by their short names. The packs keep their ids, with a new version; the other files as in `data-2` |
 | `data-2` | 2026-10-10 | Road networks of Switzerland and Italy (OSM 2026-10-08) for offline routing; the core's manifest lists them. The other files as in `data-1` and its later station list |
 | `data-1` | 2026-10-05 | 47 country packs, railway lines in 4,793 z8 blocks, block index, the core |
