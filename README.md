@@ -24,6 +24,9 @@ TravelMap 的参考数据：国家包（城市、一级行政区）、铁路线�
 | `road-street-blocks.pmtiles` | Streets (unclassified, residential, living street) of the same countries, one block per z10 tile (since `data-2`) |
 | `road-main-blocks.idx`, `road-street-blocks.idx` | Block indexes of the two road archives: byte offset, length and a 128-bit SHA-256 prefix of every block |
 | `road-countries.json` | The countries the road archives cover (`data-2`: Switzerland, Italy) and the OpenStreetMap extract date |
+| `names-blocks.pmtiles` | Detailed place names of the countries cut so far: transit stops, quarters and villages, and landmarks (museums, parks, hospitals, …) with their local names, one block per z10 tile, for naming a stay or a route's end finer than its city; read in single blocks with HTTP range requests (since `data-4`) |
+| `names-blocks.idx` | Block index of the names archive: byte offset, length and a 128-bit SHA-256 prefix of every block |
+| `names-countries.json` | The countries the names archive covers (`data-4`: Switzerland, Italy) and the OpenStreetMap extract date |
 
 The files are built from the sources below by the `georef` tool of the TravelMap
 project (`georef core`, `georef packs`, `georef rail`, `georef rail-archive`,
